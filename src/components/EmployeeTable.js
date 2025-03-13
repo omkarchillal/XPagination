@@ -24,19 +24,19 @@ const EmployeeTable = () => {
 
   const nextPage = () => {
     if (currentPage < totalPages) {
-      setCurrentPage((prev) => prev + 1);
+      setCurrentPage((prev) => Math.min(prev + 1, totalPages));
     }
   };
 
   const prevPage = () => {
     if (currentPage > 1) {
-      setCurrentPage((prev) => prev - 1);
+      setCurrentPage((prev) => Math.max(prev - 1, 1));
     }
   };
 
   return (
     <div>
-      <h1 style={{marginTop:'40px'}}>Employee Data Table</h1>
+      <h1 style={{ marginTop: "40px" }}>Employee Data Table</h1>
       <table
         border="1"
         width="100%"
