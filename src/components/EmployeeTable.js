@@ -74,8 +74,7 @@ const EmployeeTable = () => {
       <div style={{ marginTop: "10px" }}>
         <button
           style={{ backgroundColor: "#26A69A", color: "white", borderRadius: "5px" }}
-          onClick={prevPage}
-          disabled={currentPage === 1}>
+          onClick={prevPage}>
           Previous
         </button>
         <span
@@ -92,8 +91,7 @@ const EmployeeTable = () => {
         </span>
         <button
           style={{ backgroundColor: "#26A69A", color: "white", borderRadius: "5px" }}
-          onClick={nextPage}
-          disabled={currentPage === totalPages}>
+          onClick={nextPage}>
           Next
         </button>
       </div>
